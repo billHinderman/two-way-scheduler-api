@@ -24,7 +24,7 @@ gem 'sidekiq'                                                 # Job backgroundin
 # Environment Specific
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]         # Debugger for step/break/eval/track
-  gem 'factory_girl_rails'                                    # Seed data generator
+  gem 'factory_bot'                                           # Seed data generator
   gem 'figaro'                                                # Environment variables in dev and test
   gem 'rspec-activemodel-mocks'                               # Testing mocks
   gem 'rspec-rails', '~> 3.6'                                 # Testing platform
