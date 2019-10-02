@@ -110,6 +110,18 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -253,6 +265,7 @@ DEPENDENCIES
   devise_token_auth
   factory_girl_rails
   figaro
+  kaminari
   letter_opener
   letter_opener_web (~> 1.2.0)
   listen (>= 3.0.5, < 3.2)

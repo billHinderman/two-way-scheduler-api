@@ -17,6 +17,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers', '~> 0.10.0'                   # Serialization for ActiveModel
 gem 'acts_as_paranoid', '~> 0.6.0'                            # Soft delete for ActiveRecord
 gem 'devise_token_auth'                                       # Token-based user authentication via API
+gem 'kaminari'                                                # Pagination for collections
 gem 'sidekiq'                                                 # Job backgrounding
 
 
