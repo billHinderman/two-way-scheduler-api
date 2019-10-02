@@ -35,7 +35,6 @@ group :development do
   gem 'better_errors'                                         # Improved error page with console
   gem 'binding_of_caller'                                     # Binding for error console (dependency of better_errors)
   gem 'letter_opener'                                         # Capture mail in browser
-  gem 'letter_opener_web', '~> 1.2.0'                         # Viewing mail from letter_opener
   gem 'listen', '>= 3.0.5', '< 3.2'                           # Listen for file modifications
   gem 'spring'                                                # Keep aplication running in background
   gem 'spring-watcher-listen', '~> 2.0.0'                     # Watcher process for Spring
