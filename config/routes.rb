@@ -4,8 +4,12 @@ Rails.application.routes.draw do
     scope module: 'api' do
       # USERS
       scope '/users' do
-          # USER/EMPLOYER
-          # USER/TALENT
+        # USER/EMPLOYER
+        # USER/TALENT
+      end
+
+      # USER/SELF
+      scope '/self' do
       end
 
       # APPOINTMENTS

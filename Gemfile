@@ -7,7 +7,6 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.0'                                       # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'pg', '>= 0.18', '< 2.0'                                  # Use postgresql as the database for Active Record
 gem 'puma', '~> 3.11'                                         # Use Puma as the app server
-gem 'jbuilder', '~> 2.7'                                      # Build JSON APIs
 gem 'redis', '~> 4.0'                                         # Use Redis adapter to run Action Cable in production
 gem 'bootsnap', '>= 1.4.2', require: false                    # Reduces boot times through caching; required in config/boot.rb
 gem 'rack-cors'                                               # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS)
@@ -15,6 +14,10 @@ gem 'mini_racer', platforms: :ruby                            # Embed V8 in Ruby
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Specified
+gem 'active_model_serializers', '~> 0.10.0'                   # Serialization for ActiveModel
+gem 'acts_as_paranoid', '~> 0.6.0'                            # Soft delete for ActiveRecord
+gem 'devise_token_auth'                                       # Token-based user authentication via API
+gem 'sidekiq'                                                 # Job backgrounding
 
 
 # Environment Specific
