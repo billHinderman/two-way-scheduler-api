@@ -26,6 +26,11 @@ Rails.application.routes.draw do
 
       # INTERVIEWS
       scope '/interviews' do
+        root                            controller: 'interviews',            action: 'index'
+        get       '/active',            controller: 'interviews',            action: 'active_index'
+        post      '/',                  controller: 'interviews',            action: 'create'
+        get       '/:job_listing_key',  controller: 'interviews',            action: 'show'
+        patch     '/:job_listing_key',  controller: 'interviews',            action: 'update'
       end
 
     end

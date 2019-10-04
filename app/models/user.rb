@@ -1,7 +1,11 @@
-# frozen_string_literal: true
-
 class User < ActiveRecord::Base
+  extend Devise::Models
   before_create :set_key
+  after_create :create_calendar
+
+  has_many :interviews
+  has_many :appointments, through: :interviews
+  has_one :calendar
 
   # Include default devise modules.
   DEVISE_ATTRIBUTES = [
@@ -14,6 +18,11 @@ class User < ActiveRecord::Base
   ].freeze
   devise *DEVISE_ATTRIBUTES
   include DeviseTokenAuth::Concerns::User
+
+  enum role: [
+    :employer,
+    :talent
+  ]
 
   def token_validation_response
    self_response
