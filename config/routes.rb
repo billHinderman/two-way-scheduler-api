@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'auth'
   # API SUBDOMAIN
   constraints subdomain: 'api' do
+
+    # USER AUTH
+    mount_devise_token_auth_for 'User', at: 'auth'
+
     scope module: 'api' do
       # USERS
       scope '/users' do

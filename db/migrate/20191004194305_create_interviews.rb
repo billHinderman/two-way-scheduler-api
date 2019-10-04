@@ -10,6 +10,9 @@ class CreateInterviews < ActiveRecord::Migration[6.0]
 
       t.integer :length, null: false
 
+      t.references :requesting_employer, index: true
+      t.references :requesting_talent, index: true
+
       t.timestamps
     end
 
