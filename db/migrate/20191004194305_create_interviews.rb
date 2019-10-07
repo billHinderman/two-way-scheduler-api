@@ -4,6 +4,8 @@ class CreateInterviews < ActiveRecord::Migration[6.0]
       t.string  :key,   null: false
       t.string  :slug,  null: false
 
+      t.string :title
+
       t.timestamp :enable_at
       t.timestamp :expire_at
       t.integer :status, null: false

@@ -3,6 +3,8 @@ class CreateAppointments < ActiveRecord::Migration[6.0]
     create_table :appointments do |t|
       t.string :key
 
+      t.string :title
+
       t.boolean :is_confirmed_employer, null: false
       t.boolean :is_confirmed_talent, null: false
       t.integer :status, null: false

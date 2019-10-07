@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_10_04_204049) do
 
   create_table "appointments", force: :cascade do |t|
     t.string "key"
+    t.string "title"
     t.boolean "is_confirmed_employer", null: false
     t.boolean "is_confirmed_talent", null: false
     t.integer "status", null: false
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_10_04_204049) do
 
   create_table "calendars", force: :cascade do |t|
     t.string "key"
+    t.json "payload"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
@@ -43,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_10_04_204049) do
   create_table "interviews", force: :cascade do |t|
     t.string "key", null: false
     t.string "slug", null: false
+    t.string "title"
     t.datetime "enable_at"
     t.datetime "expire_at"
     t.integer "status", null: false
