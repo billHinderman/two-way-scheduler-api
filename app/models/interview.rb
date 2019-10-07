@@ -5,6 +5,8 @@ class Interview < ApplicationRecord
   belongs_to :requesting_employer, class_name: "User"
   belongs_to :requesting_talent, class_name: "User"
 
+  has_many :appointments
+
   enum status: [
     :pending,
     :approved,

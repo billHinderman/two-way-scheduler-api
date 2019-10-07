@@ -22,15 +22,16 @@ Rails.application.routes.draw do
 
       # CALENDARS
       scope '/calendars' do
+        patch     '/:calendar_key',     controller: 'calendars',            action: 'update'
       end
 
       # INTERVIEWS
       scope '/interviews' do
         root                            controller: 'interviews',            action: 'index'
-        get       '/active',            controller: 'interviews',            action: 'active_index'
+        get       '/confirmed',         controller: 'interviews',            action: 'confirmed_index'
         post      '/',                  controller: 'interviews',            action: 'create'
-        get       '/:job_listing_key',  controller: 'interviews',            action: 'show'
-        patch     '/:job_listing_key',  controller: 'interviews',            action: 'update'
+        get       '/:interview_key',    controller: 'interviews',            action: 'show'
+        patch     '/:interview_key',    controller: 'interviews',            action: 'update'
       end
 
     end

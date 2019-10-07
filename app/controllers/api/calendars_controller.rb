@@ -1,5 +1,10 @@
 module Api
   class CalendarsController < ApiController
+    before_action :get_calendar_by_key,
+    only: [
+      :update
+    ]
+
     before_action :get_calendar_by_user_key,
     only: [
       :show_calendar_by_user_key
@@ -32,7 +37,7 @@ module Api
     private
 
     def get_calendar_by_key
-      @calendar = Calendar.find_by(key: params[:key])
+      @calendar = Calendar.find_by(key: params[:calendar_key])
     end
 
     def get_calendar_by_user_key
@@ -41,7 +46,7 @@ module Api
 
     def calendar_params
       params.permit(
-        :payload, array: [:start, :end, :status]
+        :payload
       )
     end
   end
