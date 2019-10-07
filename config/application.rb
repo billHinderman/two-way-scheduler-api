@@ -21,18 +21,21 @@ Bundler.require(*Rails.groups)
 
 module TwoWaySchedulerApi
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options],
+        origins "localhost:3000", "localhost:3001", "www.lvh.me:3000", "admin.lvh.me:3001"
+        resource '*',
+        headers: :any,
         expose: ['access-token', 'token-type', 'client', 'expiry', 'uid'],
         methods: [:get, :post, :options, :patch, :put, :delete]
       end
+      allow do
+        origins "*"
+        resource '*',
+        headers: :any,
+        methods: [:get, :head, :options]
+      end
     end
-
     config.api_only = true
   end
 end

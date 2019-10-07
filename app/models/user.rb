@@ -23,10 +23,10 @@ class User < ActiveRecord::Base
     :employer,
     :talent
   ]
-
-  def token_validation_response
-   self_response
-  end
+  # 
+  # def token_validation_response
+  #  self_response
+  # end
 
   def self_response
    UserSerializerSelf.new( self, root: false )
