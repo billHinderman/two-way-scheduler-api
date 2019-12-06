@@ -6,7 +6,7 @@ ruby '2.6.3'
 # Preinstalled/Base
 gem 'rails', '~> 6.0.0'                                       # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'pg', '>= 0.18', '< 2.0'                                  # Use postgresql as the database for Active Record
-gem 'puma', '~> 3.11'                                         # Use Puma as the app server
+gem 'puma', '~> 3.12'                                         # Use Puma as the app server
 gem 'redis', '~> 4.0'                                         # Use Redis adapter to run Action Cable in production
 gem 'bootsnap', '>= 1.4.2', require: false                    # Reduces boot times through caching; required in config/boot.rb
 gem 'rack-cors'                                               # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS)
